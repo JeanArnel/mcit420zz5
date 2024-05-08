@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "azureresourcegroup" {
   name     = "MCIT_resource_group"
   location = "Canada Central"
 }
-resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
+resource "azurerm_kubernetes_cluster" "simplekubernetescluster1" {
   name                = "k8batcha06"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
@@ -26,7 +26,7 @@ resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
     Environment = "Production"
   }
 }
-resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
+resource "azurerm_kubernetes_cluster" "simplekubernetescluster2" {
   name                = "k9batcha06"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
@@ -46,7 +46,7 @@ resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
     Environment = "Production"
   }
 }
-resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
+resource "azurerm_kubernetes_cluster" "simplekubernetescluster3" {
   name                = "k10batcha06"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
