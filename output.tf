@@ -40,7 +40,7 @@ output "sumofthreenumbers"{
     value=sum([for numberoutput in local.total_output: tonumber(numberoutput)])
 }
 //========================================Kubernetes cluster creation start========================================
-output "id" {
+/*output "id" {
   value = [
     for cluster in azurerm_kubernetes_cluster.batchabcd: cluster.id
   ]
@@ -80,6 +80,7 @@ output "host" {
     for cluster in azurerm_kubernetes_cluster.batchabcd: cluster.kube_config.0.host
   ]
 }
+*/
 //========================================Kubernetes cluster Output end========================================
 
 output "exampleoutput" {
