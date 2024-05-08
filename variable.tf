@@ -66,3 +66,7 @@ variable "classworkclusters"{
 type =list(string)
 default=["montrealcluster","torontocluster","vancouvercluster","albertacluster]
 }
+variable "dnsprefix"{
+type=string
+default="mcitdns"
+}
