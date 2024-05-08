@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "azureresourcegroup" {
   location = "Canada Central"
 }
 resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
-  name                = "mcitsimplekubernetescluster"
+  name                = "k8batcha06"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
   dns_prefix          = "exampleaks1"
@@ -26,7 +26,7 @@ resource "azurerm_kubernetes_cluster" "simplekubernetescluster" {
     Environment = "Production"
   }
 }
-resource "azurerm_kubernetes_cluster" "batchabcd" {
+/*resource "azurerm_kubernetes_cluster" "batchabcd" {
   for_each            = {for cluster in local.cluster_names: cluster=>cluster}
   name                = "${var.prefix}cluster"
   location            = azurerm_resource_group.azureresourcegroup.location
@@ -47,6 +47,7 @@ resource "azurerm_kubernetes_cluster" "batchabcd" {
     Environment = "Production"
   }
 }
+*/
 /*
 output "client_certificate" {
   value     = [for cluster in azurerm_kubernetes_cluster.batchabcd:cluster.kube_config.0.client_certificate]
