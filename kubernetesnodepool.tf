@@ -1,3 +1,4 @@
+/*
 resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
  for_each               = azurerm_kubernetes_cluster.batchabcd
  name                   = "${each.key}"
@@ -9,3 +10,4 @@ resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
     Environment = "Production"
   }
 }
+*/
