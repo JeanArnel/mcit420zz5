@@ -62,4 +62,7 @@ variable "summersports"{
     type =list(string)
     default=["soccer","basketball","badminton","tabletennis"]
 }
-
+variable "classworkclusters"{
+type =list(string)
+default=["montrealcluster","torontocluster","vancouvercluster","albertacluster]
+}
