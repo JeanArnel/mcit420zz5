@@ -12,7 +12,7 @@ resource "azurerm_kubernetes_cluster" "batchabcd" {
   name                = "${var.prefix}${each.key}"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
-  dns_prefix          = "exampleaks1"
+  dns_prefix          = var.dns_prefix
 
   default_node_pool {
     name       = "default"
