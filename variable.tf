@@ -64,7 +64,7 @@ variable "summersports"{
 }
 variable "classworkclusters"{
 type =list(string)
-default=["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
+default=["montreal","toronto","vancouver","alberta"]
 }
 variable "dnsprefix"{
 type=string
