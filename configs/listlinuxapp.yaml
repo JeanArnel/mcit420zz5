@@ -2,6 +2,8 @@ listoflinuxapp:
   - name: firstlinuxapp    
     os_type: Linux
     sku_name: P1v2
+    client_certificate_enabled: true
   - name: thirdlinuxapp    
     os_type: Linux
     sku_name: P1v2
+    client_certificate_enabled: false
