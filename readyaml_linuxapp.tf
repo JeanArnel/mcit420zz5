@@ -5,7 +5,8 @@ locals{
       for linuxapps in try(app.listoflinuxapp, []) :{
         name=linuxapps.name
         os_type=linuxapps.os_type
-        sku_name=linuxapps.sku_name     
+        sku_name=linuxapps.sku_name
+        client_certificate_enabled =linuxapps.client_certificate_enabled
       }
     ]
 ])
