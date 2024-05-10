@@ -6,4 +6,4 @@ listoflinuxapp:
   - name: thirdlinuxapp    
     os_type: Linux
     sku_name: P1v2
-    enabled: true
+    enabled: false
