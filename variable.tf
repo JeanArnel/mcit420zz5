@@ -68,5 +68,5 @@ default=["montreal","toronto","vancouver","alberta"]
 }
 variable "dnsprefix"{
 type=string
-default="mcitdns"
+
 }
