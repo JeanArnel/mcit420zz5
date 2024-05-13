@@ -6,7 +6,7 @@ locals{
         name=linuxapps.name
         os_type=linuxapps.os_type
         sku_name=linuxapps.sku_name
-        enabled =linuxapps.enabled
+
       }
     ]
 ])
@@ -26,7 +26,7 @@ resource "azurerm_linux_web_app" "batcha06webapp" {
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
   location            = azurerm_resource_group.azureresourcegroup.location
   service_plan_id     = each.value.id
-  enabled             = each.value.enabled
+
 
   site_config {}
 }
