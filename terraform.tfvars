@@ -1,2 +1,2 @@
 myname="sami"
-dns_prefix="mcitdns"
+dnsprefix="mcitdns"
