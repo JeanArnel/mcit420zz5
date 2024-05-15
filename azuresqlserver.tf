@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "databaserg" {
   location = "West Europe"
 }
 
-resource "azurerm_mssql_server" "example" {
+resource "azurerm_mssql_server" "azuresqlserver" {
   name                         = "mssqlserver"
   resource_group_name          = azurerm_resource_group.databaserg.name
   location                     = azurerm_resource_group.databaserg.location
