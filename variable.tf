@@ -70,3 +70,6 @@ variable "dnsprefix"{
 type=string
 
 }
+variable "administrator_login"{
+}
+variable "administrator_login_password"{}
