@@ -1,18 +1,18 @@
 locals{
-  linux_app=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
-  linux_app_list = flatten([
-    for app in local.linux_app : [
-      for linuxapps in try(app.listoflinuxapp, []) :{
-        name=linuxapps.name
-        os_type=linuxapps.os_type
-        sku_name=linuxapps.sku_name
+  window_app=[for f in fileset("${path.module}/${var.windowsconfig}", "[^_]*.yaml") : yamldecode(file("${path.module}/${var.windowsconfig}/${f}"))]
+  window_app_list = flatten([
+    for app in local.window_app : [
+      for windowapps in try(app.listofwindowapp, []) :{
+        name=windowapps.name
+        os_type=windowapps.os_type
+        sku_name=windowapps.sku_name
 
       }
     ]
 ])
 }
-resource "azurerm_service_plan" "batcha06sp" {
-  for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
+resource "azurerm_service_plan" "windowsbatcha06sp" {
+  for_each            ={for sp in local.window_app_list: "${sp.name}"=>sp }
   name                = each.value.name
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
   location            = azurerm_resource_group.azureresourcegroup.location
@@ -20,8 +20,8 @@ resource "azurerm_service_plan" "batcha06sp" {
   sku_name            = each.value.sku_name
 }
 
-resource "azurerm_linux_web_app" "batcha06webapp" {
-  for_each            = azurerm_service_plan.batcha06sp
+resource "azurerm_linux_web_app" "windowsbatcha06webapp" {
+  for_each            = azurerm_service_plan.windowsbatcha06sp
   name                = each.value.name
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
   location            = azurerm_resource_group.azureresourcegroup.location
