@@ -71,5 +71,8 @@ type=string
 
 }
 variable "administrator_login"{
+type=string
 }
-variable "administrator_login_password"{}
+variable "administrator_login_password"{
+type=string
+}
