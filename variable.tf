@@ -76,3 +76,7 @@ type=string
 variable "administrator_login_password"{
 type=string
 }
+variable "windowsconfig"{
+    type=string
+    default="windowsconfig"
+}
