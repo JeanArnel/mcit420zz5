@@ -80,3 +80,5 @@ variable "windowsconfig"{
     type=string
     default="windowsconfig"
 }
+variable "db_admin_username"{}
+variable "db_admin_password"{}
