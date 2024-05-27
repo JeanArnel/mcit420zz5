@@ -214,12 +214,7 @@ resource "azurerm_mysql_server" "mysql" {
   public_network_access_enabled = false
   ssl_enforcement_enabled       = true
 
-  storage_profile {
-    storage_mb             = 5120
-    backup_retention_days  = 7
-    geo_redundant_backup   = "Disabled"
-    auto_grow              = "Enabled"
-  }
+
 }
 
 resource "azurerm_mysql_database" "exampledb" {
