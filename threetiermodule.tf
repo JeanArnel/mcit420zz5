@@ -1,4 +1,3 @@
-
 module "three_tier_app" {
   source              = "./modulethreetierapp/"
   resource_group_name = "mcitthreetiermodule"
