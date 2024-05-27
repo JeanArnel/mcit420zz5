@@ -1,6 +1,6 @@
 
 module "three_tier_app" {
-  source              = "./modules/three-tier-app"
+  source              = "./modulethreetierapp/"
   resource_group_name = "mcitthreetiermodule"
   location            = "West Europe"
   admin_username      = administrator_login
