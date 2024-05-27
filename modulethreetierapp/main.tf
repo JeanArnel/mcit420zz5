@@ -119,7 +119,7 @@ resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_subnet_network_security_group_association" "app_assoc" {
-resource_group_name = azurerm_resource_group.rg.name
+
   subnet_id                 = azurerm_subnet.app.id
   network_security_group_id = azurerm_network_security_group.app_nsg.id
 }
