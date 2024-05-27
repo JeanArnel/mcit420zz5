@@ -55,7 +55,6 @@ resource "azurerm_network_security_group" "db_nsg" {
 
 # Network Security Rules
 resource "azurerm_network_security_rule" "web_allow_http" {
-  location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   name                        = "allow-http"
   priority                    = 100
@@ -70,7 +69,6 @@ resource "azurerm_network_security_rule" "web_allow_http" {
 }
 
 resource "azurerm_network_security_rule" "web_allow_https" {
-  location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   name                        = "allow-https"
   priority                    = 101
@@ -85,7 +83,6 @@ resource "azurerm_network_security_rule" "web_allow_https" {
 }
 
 resource "azurerm_network_security_rule" "app_allow_inbound" {
-  location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   name                        = "allow-inbound"
   priority                    = 100
@@ -100,7 +97,6 @@ resource "azurerm_network_security_rule" "app_allow_inbound" {
 }
 
 resource "azurerm_network_security_rule" "db_allow_inbound" {
-  location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   name                        = "allow-inbound-db"
   priority                    = 100
