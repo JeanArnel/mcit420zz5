@@ -9,6 +9,6 @@ module "three_tier_app" {
   db_admin_password   = db_admin_password
 }
 
-output "web_vm_public_ip" {
+output "module_web_vm_public_ip" {
   value = module.three_tier_app.web_vm_public_ip
 }
